@@ -6,4 +6,9 @@
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Servers</button>
 <!--<p>{{allowNewServer}}</p>-->
 <p>{{serverCreationStatus}}</p>
+
+<input type="text" class="form-control" [(ngModel)]="userName">
+<button class="btn btn-primary" [disabled]="userName === ''" (click)="userName = ''">Reset</button>
+<p>{{userName}}</p>
+
 <app-server></app-server>
